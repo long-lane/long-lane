@@ -1,0 +1,265 @@
+@media only screen and (min-device-width: 220px) and (max-device-width: 767px) {
+  body {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+  }
+
+  nav,
+  .hero,
+  .services,
+  .about-us,
+  .community,
+  .privacy-policy,
+  footer {
+    padding: $s;
+  }
+  h1 {
+    font: {
+      size: $h;
+    }
+    line-height: $h;
+  }
+  h2 {
+    font: {
+      size: $xxl;
+    }
+  }
+  nav {
+    padding: $s;
+    row-gap: $m;
+    span {
+      display: inline-flex;
+    }
+    ul {
+      flex: 0 0 100%;
+      flex-flow: column nowrap;
+      row-gap: $m;
+      align-items: flex-start;
+      justify-content: flex-start;
+      transition: all 0.3s;
+      height: 0;
+      overflow: hidden;
+
+      li {
+        &:last-of-type {
+          display: inline;
+        }
+      }
+    }
+    a[class="btn primary-btn"] {
+      display: none;
+    }
+  }
+  .toggle-menu {
+    height: 180px;
+  }
+  .hero {
+    height: 600px;
+    article {
+      flex: 0 0 100%;
+
+      &:first-of-type {
+        span {
+          font: {
+            size: $xxl;
+          }
+        }
+        p {
+          font: {
+            size: $h;
+          }
+        }
+      }
+      &:last-of-type {
+        // position:relative;
+        div {
+          div {
+            width: 400px;
+
+            left: -15%;
+            right: unset;
+            bottom: -50%;
+            top: unset;
+          }
+        }
+      }
+    }
+  }
+  .services {
+    row-gap: $xh;
+    article {
+      flex: 0 0 100%;
+
+      &:nth-of-type(2n) {
+        padding: {
+          bottom: calc(3 * #{$xh});
+        }
+        align-items: center;
+        img {
+          width: 250px;
+          height: 157px;
+          box-shadow: 0 $xxs $xh $xxs rgba($purple1100, 0.3);
+          border-radius: $xs;
+        }
+      }
+
+      &:nth-of-type(3) {
+        order: unset;
+      }
+    }
+  }
+
+  .pricing {
+    margin: $h 0 0 0;
+
+    article {
+      &:first-of-type {
+        p {
+          font: {
+            size: $xl;
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        width: 100vw;
+        padding: 0 $s $h $s;
+        overflow-x: scroll;
+        justify-content: flex-start;
+        column-gap: $s;
+
+        a {
+          flex: 0 0 250px;
+
+          div {
+            padding: $xl $xl $xh $xl;
+            h3 {
+              font: {
+                size: $xxl;
+              }
+            }
+            p {
+              font: {
+                size: $xxl;
+              }
+            }
+           
+          }
+          &:hover {
+            transform: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  .short-form {
+    padding: $xh $s;
+    flex-flow: column wrap;
+    div {
+      &:first-of-type {
+        width: 150px;
+      }
+      align-items: center;
+      p {
+        font: {
+          size: $xl;
+        }
+        text-align: center;
+      }
+      h3 {
+        font: {
+          size: $xxl;
+        }
+      }
+      form {
+        width: 90vw;
+        justify-content: space-between;
+        input {
+          padding: $s 0;
+          &[type="email"] {
+            flex: 0 0 80%;
+          }
+          font: {
+            size: $l;
+          }
+        }
+        div {
+          max-width: $l;
+        }
+        svg {
+          width: $xl;
+        }
+      }
+    }
+  }
+
+  .about-us {
+    padding: {
+      top: $xh;
+    }
+    row-gap: $h;
+    article {
+      &:first-of-type{
+        p{
+          width:250px;
+        }
+      }
+      &:last-of-type {
+        img {
+          width: 250px;
+          height: 252px;
+        }
+      }
+    }
+  }
+
+  .community {
+   flex-flow: column nowrap;
+   padding: {
+    top: 150px;
+  }
+   article{
+    &:first-of-type{
+      p{
+        width:250px;
+      }
+    }
+    &:last-of-type{
+      div{
+        // display:none;
+        width:250px;
+        margin-bottom: -40px;
+      }
+    }
+   }
+  }
+
+  footer {
+    padding: {
+      top: $xh;
+    }
+    flex-flow: column wrap;
+    justify-content: space-between;
+    row-gap: $xh;
+    border: {
+      bottom-left-radius: unset;
+      bottom-right-radius: unset;
+    }
+    article {
+      &:nth-of-type(2){
+        align-items: center;
+        ;
+
+      }
+      &:last-of-type {
+        align-items: center;
+        row-gap:$s;
+        font:{
+          size: $s;
+        }
+      }
+    }
+  }
+}

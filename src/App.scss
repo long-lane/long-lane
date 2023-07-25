@@ -1,0 +1,771 @@
+@import "./UISystem.scss";
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(1%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  border: 2px solid rgba($grey1100, 0.1);
+  width: 1200px;
+  font: {
+    family: "regular";
+    size: $l;
+  }
+  color: $grey1100;
+  border-radius: $xxs;
+  box-shadow: 0 $xxs $s $xs rgba($purple1100, 0.1);
+  margin: $h 0;
+}
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font: {
+    family: "bold";
+    size: calc(2 *#{$h});
+  }
+  text: {
+    transform: uppercase;
+  }
+  line-height: calc(#{$phi}*#{$h});
+  max-width: 10ch;
+}
+
+h2 {
+  font: {
+    family: "extra light";
+    size: $xxxl;
+  }
+  text: {
+    transform: capitalize;
+  }
+}
+
+h3 {
+  font: {
+    family: "extra bold";
+    size: $xxxl;
+  }
+  text: {
+    transform: capitalize;
+  }
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  font: {
+    size: $xl;
+    family: "logo";
+  }
+  text: {
+    transform: uppercase;
+  }
+  figure {
+    display: flex;
+    align-items: baseline;
+    column-gap: $xxs;
+  }
+}
+
+.btn {
+  min-width: 120px;
+  display: inline-flex;
+  column-gap: $xxs;
+  justify-content: center;
+  padding: $xs calc(2 *#{$m});
+  border-radius: $xxs;
+  margin-top: $xxl;
+  text: {
+    transform: capitalize;
+  }
+}
+
+.primary-btn {
+  background-color: $purple1100;
+  color: $white100;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+.secondary-btn {
+  color: $purple1100;
+  border: 2px solid $purple1100;
+  &:hover {
+    background-color: $purple1100;
+    color: $white100;
+  }
+}
+nav,
+.hero,
+.services,
+.about-us,
+.community,
+.privacy-policy,
+footer {
+  padding: $h;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+nav {
+  justify-content: space-between;
+  flex: 1 0 100%;
+
+  span {
+    display: none;
+  }
+  ul {
+    display: flex;
+    column-gap: $h;
+    list-style-type: none;
+    align-items: center;
+    li {
+      a {
+        text: {
+          transform: capitalize;
+        }
+        color: $grey1100;
+        &:focus,
+        &:hover {
+          color: $purple1100;
+        }
+      }
+      &:last-of-type {
+        display: none;
+      }
+    }
+  }
+  a[class="btn primary-btn"] {
+    margin-top: 0;
+  }
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  overflow: hidden;
+  article {
+    flex: 0 0 50%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    position: relative;
+
+    &:first-of-type {
+      width: 50%;
+      span {
+        font: {
+          size: $h;
+          family: "extra light";
+        }
+      }
+      p {
+        font: {
+          size: calc(2 *#{$h});
+          family: "extra light";
+        }
+        color: $purple1100;
+      }
+      span,
+      p {
+        text: {
+          transform: uppercase;
+        }
+      }
+    }
+    &:last-of-type {
+      width: 50%;
+      div {
+        div {
+          width: 800px;
+          position: absolute;
+          left: -150px;
+          top: -50px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  row-gap: calc(3 *#{$xh});
+  margin: calc(3 *#{$xh}) 0 0 0;
+  article {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: $xl;
+    column-gap: $h;
+    flex: 0 0 45%;
+    &:nth-of-type(2n + 1) {
+      div {
+        display: inline-flex;
+        align-items: center;
+        column-gap: $s;
+        span {
+          flex: 1 1 0;
+          background-color: $purple1100;
+          height: 2px;
+        }
+      }
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-flow: column wrap;
+        row-gap: $xs;
+        font: {
+          family: "extra light";
+        }
+        li {
+          display: inline-flex;
+          column-gap: $xxs;
+        }
+      }
+      a[class="btn secondary-btn"] {
+        align-self: flex-start;
+      }
+    }
+    &:nth-of-type(2n) {
+      img {
+        width: 450px;
+        height: 283px;
+        box-shadow: $xxs 0 $xh $xxs rgba($purple1100, 0.3);
+        border-radius: $s;
+      }
+    }
+    &:nth-of-type(3) {
+      order: 3;
+    }
+  }
+}
+
+.pricing {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: $xh;
+  margin: calc(3 *#{$xh}) 0 0 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  article {
+    display: flex;
+    &:first-of-type {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      row-gap: $m;
+      p {
+        font: {
+          family: "medium";
+          size: $xxl;
+        }
+
+        text: {
+          transform: uppercase;
+        }
+      }
+      div {
+        display: flex;
+        justify-content: center;
+        column-gap: $m;
+        width: 100%;
+        input {
+          cursor: pointer;
+          font: {
+            size: $l;
+          }
+          text: {
+            transform: uppercase;
+          }
+          background-color: transparent;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      padding: 0 $h $h $h;
+      justify-content: space-between;
+      a {
+        all: unset;
+        flex: 0 0 350px;
+        transition: all 0.3s;
+
+        div {
+          cursor: pointer;
+          opacity: 0;
+          padding: $xxl $xxl $xh $xxl;
+          display: flex;
+          flex-flow: column wrap;
+          row-gap: $s;
+          border: 2px solid $purple1100;
+          border-radius: $xxs;
+
+          h3 {
+            display: flex;
+            column-gap: $xxs;
+          }
+          p {
+            font: {
+              family: "bold";
+              size: $xxxl;
+            }
+            color: $purple1100;
+            span {
+              color: $grey1100;
+              font: {
+                size: $xl;
+              }
+            }
+          }
+          ul {
+            list-style-type: none;
+            display: flex;
+            flex-flow: column nowrap;
+            row-gap: $xs;
+            border: {
+              top: 2px solid $grey100;
+            }
+            padding: {
+              top: $h;
+            }
+            li {
+              display: inline-flex;
+              align-items: flex-end;
+              column-gap: $xxs;
+              &[plan="inc"] {
+                font: {
+                  family: "regular";
+                }
+              }
+              &[plan="notInc"] {
+                font: {
+                  family: "extra light";
+                }
+              }
+            }
+          }
+
+          a[class="btn secondary-btn"] {
+            padding: $m;
+            min-width: 50px;
+            min-height: 50px;
+            align-self: flex-end;
+            margin: auto 0;
+            &:hover {
+              background-color: $purple1100;
+              color: $white100;
+            }
+          }
+        }
+        &:hover {
+          transform: translateY(-$xxl);
+          box-shadow: 0 0 $xh $xxs rgba($purple1100, 0.2);
+        }
+      }
+    }
+  }
+}
+
+.plan-active {
+  border: none;
+  border-bottom: 5px solid $purple1100;
+  font: {
+    family: "bold";
+  }
+}
+.plan-inactive {
+  border: none;
+  border-bottom: 5px solid transparent;
+  font: {
+    family: "regular";
+  }
+}
+
+.short-form {
+  background-color: rgba($purple1100, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h3 {
+    color: $purple1100;
+  }
+  div {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: $xs;
+    p {
+      max-width: 28ch;
+      &::first-letter {
+        text: {
+          transform: capitalize;
+        }
+      }
+      font: {
+        size: $xxl;
+        family: "extra light";
+      }
+      span {
+        font: {
+          family: "bold";
+        }
+        text: {
+          transform: capitalize;
+        }
+      }
+    }
+    form {
+      display: flex;
+      flex-flow: row wrap;
+      width: 300px;
+      border-bottom: 2px solid rgba($grey1100, 0.2);
+      input {
+        font: {
+          family: "bold";
+          size: $xl;
+        }
+        padding: $xs;
+        outline: none;
+        border: none;
+        &[type="email"] {
+          flex: 0 0 90%;
+          background-color: transparent;
+          &:disabled {
+            cursor: not-allowed;
+          }
+        }
+      }
+      button[type="submit"] {
+        flex: 0 0 auto;
+        cursor: pointer;
+        padding: 0;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        font: {
+          size: $xxl;
+        }
+        color: $purple1100;
+        transition: all 0.3s;
+        background-color: transparent;
+        &:hover {
+          transform: rotate(45deg);
+        }
+        &:disabled {
+          background-color: transparent;
+          color: $purple1100;
+          &:hover {
+            transform: none;
+          }
+          cursor: not-allowed;
+        }
+        div {
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: $purple1100;
+  color: $white100;
+  column-gap: $h;
+
+  h2 {
+    font: {
+      family: "extra bold";
+    }
+  }
+  article {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: $xl;
+    opacity: 0;
+    &:first-of-type {
+      row-gap: $xl;
+
+      p {
+        max-width: 35ch;
+        font: {
+          family: "extra light";
+        }
+      }
+      a[class="btn secondary-btn"] {
+        color: $white100;
+        border-color: $white100;
+        align-self: flex-start;
+        &:hover {
+          filter: brightness(1.5);
+        }
+      }
+    }
+    &:last-of-type {
+      img {
+        width: 350px;
+        height: 353px;
+        margin-bottom: -80px;
+        // background-color: red;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.community {
+  padding: {
+    top: 150px;
+  }
+  background-color: $grey100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row-reverse;
+
+  article {
+    display: flex;
+    flex-flow: column wrap;
+    opacity: 0;
+    a[class="btn secondary-btn"] {
+      align-self: flex-start;
+    }
+
+    &:first-of-type {
+      row-gap: $xl;
+      p {
+        width: 35ch;
+        font: {
+          family: "extra light";
+        }
+      }
+    }
+    &:last-of-type {
+      div {
+        width: 450px;
+        margin-bottom: -90px;
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  row-gap: $h;
+  background-color: $grey1100;
+  border-bottom: {
+    left-radius: $xxs;
+    right-radius: $xxs;
+  }
+  color: $white100;
+  article {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 0 0 40%;
+    &:first-of-type {
+      row-gap: $xl;
+    }
+    &:nth-of-type(2) {
+      align-items: flex-end;
+      justify-content: flex-end;
+      row-gap: $xxs;
+      p {
+        font: {
+          size: $s;
+        }
+      }
+      a {
+        color: $white100;
+      }
+    }
+    &:last-of-type {
+      flex: 0 0 100%;
+      flex-flow: row wrap;
+      justify-content: stretch;
+      color: rgba($white100, 0.7);
+      column-gap: $m;
+      font: {
+        size: $s;
+      }
+      ul {
+        display: inline-flex;
+        flex-flow: row wrap;
+        list-style-type: none;
+        flex: 1 1 auto;
+        column-gap: $xxs;
+      }
+    }
+    a {
+      all: unset;
+      cursor: pointer;
+      &:hover {
+        color: $white100;
+      }
+    }
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: $xl;
+  color: $white100;
+
+  label {
+    display: inline-flex;
+    row-gap: $xxs;
+    flex-flow: column nowrap;
+    text: {
+      transform: capitalize;
+    }
+    font: {
+      family: "extra light";
+      size: $m;
+    }
+  }
+
+  input,
+  textarea {
+    transition: border-color 0.3s;
+    font: {
+      family: "regular";
+      size: $l;
+    }
+    color: $white100;
+    outline: none;
+
+    &::placeholder {
+      color: $white100;
+    }
+  }
+
+  input {
+    border: none;
+    border-bottom: 2px solid rgba($white100, 0.1);
+    &:focus {
+      border-bottom-color: $white100;
+    }
+    background-color: transparent;
+    padding: {
+      bottom: $xxs;
+    }
+  }
+
+  textarea {
+    resize: none;
+    background-color: rgba($white100, 0.2);
+    border: 2px solid rgba($white100, 0.1);
+    border-radius: $xxs;
+    padding: $s;
+
+    &:focus {
+      border-color: $white100;
+    }
+  }
+  button[type="submit"] {
+    align-self: flex-end;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font: {
+      family: "regular";
+      size: $l;
+    }
+    background-color: $purple1100;
+    cursor: pointer;
+    border: none;
+    padding: $s;
+    border-radius: $xxs;
+    color: $white100;
+    width: $h;
+    height: $h;
+    &:hover {
+      filter: brightness(1.5);
+      svg {
+        transition: all 0.3s;
+      }
+    }
+    &:disabled {
+      background-color: $green1100;
+      filter: unset;
+      color: $grey1100;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.privacy-policy {
+  display: flex;
+
+  article {
+    h2 {
+      display: inline-flex;
+      flex-flow: column nowrap;
+      span {
+        font: {
+          size: $m;
+        }
+      }
+    }
+    h3 {
+      font: {
+        size: $xl;
+        family: "medium";
+      }
+    }
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: $xxl;
+    ol {
+      display: flex;
+      flex-flow: column nowrap;
+      row-gap: $xxl;
+      li {
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: $s;
+        ol {
+          row-gap: $xxs;
+          margin-left: $l;
+          li {
+            flex-flow: row wrap;
+            &::before {
+              content: "-";
+            }
+          }
+        }
+      }
+    }
+    p {
+      max-width: 60ch;
+    }
+    a {
+      color: $purple1100;
+    }
+  }
+}
+
+.animate {
+  animation: fadeInBottom 0.5s ease-in 0.5s forwards;
+}
+
+@import "./Tablet.scss";
+@import "./Mobile.scss";

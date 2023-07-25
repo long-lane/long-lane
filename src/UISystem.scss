@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  display: flex;
+  justify-content: center;
+}
+
+/* Sizes */
+$phi: 1.618;
+$xxs: 7px;
+$xs: 12px;
+$s: 14px;
+$m: 16px;
+$l: 18px;
+$xl: 20px;
+$xxl: 24px;
+$xxl: 30px;
+$xxxl: 36px;
+$h: 48px;
+$xh: 60px;
+$xxh: 72px;
+
+/* Font Weights */
+
+@font-face {
+  font-family: "light italic";
+  src: url("../src/assets/fonts/Karla-LightItalic.ttf"), local("Courier");
+  font-display: swap;
+}
+@font-face {
+  font-family: "extra light";
+  src: url("../src/assets/fonts/Karla-ExtraLight.ttf"), local("Courier");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "regular";
+  src: url("../src/assets/fonts/Karla-Regular.ttf"), local("Courier");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "medium";
+  src: url("../src/assets/fonts/Karla-Medium.ttf"), local("Courier");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "bold";
+  src: url("../src/assets/fonts/Karla-Bold.ttf"), local("Courier");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "extra bold";
+  src: url("../src/assets/fonts/Karla-ExtraBold.ttf"), local("Courier");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "logo";
+  src: url("../src/assets/fonts/UnicaOne-Regular.ttf"), local("Courier");
+  font-display: swap;
+}
+
+/* Greys */
+$grey100: #efefef;
+$grey1100: #00012a;
+
+/* White */
+$white100: #ffffff;
+
+/* Purple */
+$purple1100: #4f4ad7;
+
+/* Pink */
+$pink1100: #dd3c73;
+
+/* Green */
+$green1100: #3fe6b6;

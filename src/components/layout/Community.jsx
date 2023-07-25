@@ -1,7 +1,7 @@
 import React from "react";
-import { communityData } from "../data/Data";
+import { communityData } from "./../data/Data";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
-import communityAnimation from "../../assets/img/community.json";
+import communityAnimation from "./../../assets/img/community.json";
 import { useInView } from "react-intersection-observer";
 
 import { HashLink } from "react-router-hash-link";

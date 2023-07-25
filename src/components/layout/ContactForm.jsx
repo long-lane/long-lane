@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
-import { contactFormHandler } from "../../helpers/FormHandler";
-import { FormReducer } from "../../reducers/Reducers";
+import { contactFormHandler } from "./../../helpers/FormHandler";
+import { FormReducer } from "./../../reducers/Reducers";
 import { ThreeDots } from "react-loader-spinner";
 import {FiCheckCircle,FiArrowUpRight} from 'react-icons/fi'
 export const ContactForm = () => {

@@ -3,7 +3,7 @@ import { Logo } from "./Logo";
 import { HashLink } from "react-router-hash-link";
 import { IconContext } from "react-icons";
 import { CgMenuRight, CgClose } from "react-icons/cg";
-import { MenuReducer } from "../../reducers/Reducers";
+import { MenuReducer } from "./../../reducers/Reducers";
 
 export const Nav = () => {
   const [state, dispatch] = useReducer(MenuReducer, { display: false });

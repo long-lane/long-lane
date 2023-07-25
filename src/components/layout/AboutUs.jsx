@@ -1,6 +1,6 @@
 import React from "react";
-import { aboutUsData } from "../data/Data";
-import aboutUsImg from "../../assets/img/about_us.webp";
+import { aboutUsData } from "./../data/Data";
+import aboutUsImg from "./../../assets/img/about_us.webp";
 import { HashLink } from "react-router-hash-link";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useInView } from "react-intersection-observer";

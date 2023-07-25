@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../../assets/img/hero.json";
+import hero from "./../../assets/img/hero.json";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { HashLink } from "react-router-hash-link";
 import { FiArrowUpRight } from "react-icons/fi";

@@ -16,6 +16,7 @@ export const Footer = () => {
       </article>
       <article>
         <HashLink to='/privacy-policy#policy'>Privacy Policy</HashLink>
+        <pre>testing github actions-workflow</pre>
       </article>
     </>
   );

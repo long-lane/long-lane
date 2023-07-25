@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import { PricingReducer } from "./../../reducers/Reducers";
 import { HashLink } from "react-router-hash-link";
-import { plansDescriptionData } from "../data/Data";
+import { plansDescriptionData } from "./../data/Data";
 import { IconContext } from "react-icons";
 import { BsCheck2, BsX } from "react-icons/bs";
 import { PiPlantLight, PiPottedPlant, PiTreeLight } from "react-icons/pi";

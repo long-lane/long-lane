@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import shortFormAnimation from "./../../assets/img/short_form_animation.json";
 import { shortFormHandler } from "./../../helpers/FormHandler";
-import { plansDescriptionData } from "../data/Data";
+import { plansDescriptionData } from "./../data/Data";
 import { FormReducer } from "./../../reducers/Reducers";
 import { ThreeDots } from "react-loader-spinner";
 import { FiArrowUpRight, FiCheckCircle } from "react-icons/fi";

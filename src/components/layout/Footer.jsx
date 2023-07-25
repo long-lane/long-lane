@@ -16,7 +16,6 @@ export const Footer = () => {
       </article>
       <article>
         <HashLink to='/privacy-policy#policy'>Privacy Policy</HashLink>
-        <p></p>
       </article>
     </>
   );
